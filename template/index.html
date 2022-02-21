@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Thyroid Disease Prediction</title>
+        <link rel="stylesheet" href="../static/styles/style.css">
+    </head>
+
+    <body>
+
+        <center>
+
+        <h1 style="font-size:40px; color:rgb(51, 51, 0);">Thyroid disoder prediction</h1>
+            <div>
+            <img src="static/thyroid-problems-banner-bg.jpg" class="w3-border w3-padding" style="width:100%">
+            </div>
+        <h4 style="font-size:20px;margin-left: 20px;">This web application is made to predict Thyroid disease with the following parameters given</h4>
+        <p style="font-size:20px;">Fill the form and get your results</p>
+
+
+        <form method='POST', action="{{url_for('prediction')}}">
+
+            <label style="font-size:large; padding:3px 8px; margin: 10px 3px 17px 3px;">TSH:</label>
+            <input type="float", style="padding:5px 17px; font-size:13px;" name='TSH', placeholder="enter the value"><br><br>
+
+            <label style="font-size:large; padding:3px 10px; margin: 10px 4px 17px 4px;">FTI:</label>
+            <input type="float", style="padding:5px 17px; font-size:13px;" name='FTI', placeholder="enter the value"><br><br>
+
+            <label style="font-size:large; padding:3px 8px; margin: 10px 4px 17px 4px;">TT4:</label>
+            <input type="float", style="padding:5px 17px; font-size:13px;" name='TT4', placeholder="enter the value"><br><br>
+
+            <label style="font-size:large; padding:3px 8px; margin: 10px 12px 17px 4px;">T3:</label>
+            <input type="float", style="padding:5px 17px; font-size:13px;" name='T3', placeholder="enter the value"><br><br>
+
+            <label style="font-size:large; padding:3px 12px; margin: 10px 10px 17px 4px;">query_hypothyroid:</label>
+            <select class="text" name="query_hypothyroid" style="padding: 4px 6px; font-size:15 ;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+            </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">on_thyroxine:</label>
+            <select class="text" name="on_thyroxine" style="padding: 4px 6px; font-size:15;margin-left:43px;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+        </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">sex:</label>
+            <select class="text" name="sex" style="padding: 4px 1px; font-size:15; margin-left:114px;">
+                <option value="text">select</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+        </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">pregnant:</label>
+            <select class="text" name="pregnant" style="padding: 4px 6px; font-size:15; margin-left:73px;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+        </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">psych:</label>
+            <select class="text" name="psych" style="padding: 4px 7px; font-size:15; margin-left:93px;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+        </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">thyroid_surgery:</label>
+            <select class="text" name="thyroid_surgery" style="padding: 4px 7px; font-size:15; margin-left:20px;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+        </select><br><br>
+
+            <label style="font-size:large; padding:3px 13px; margin: 10px 4px 17px 4px;">goitre:</label>
+            <select class="text" name="goitre" style="padding: 4px 7px; font-size:15; margin-left:93px;">
+                <option value="text">select</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+        </select><br><br>
+
+            <input type="submit" , style="background-color:;padding:5px 12px; font-size: 15px;" value='Predict'> <br><br>
+            <input type="reset", style="background-color:;padding:5px 12px; font-size: 15px;" value='Reset value'> <br><br>
+
+        </form>
+
+        </center>
+    </body>
+</html>
+
+
+
+
+
+
